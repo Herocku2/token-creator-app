@@ -4,9 +4,57 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 */
 
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState, createContext, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+
+// Language Context
+const LanguageContext = createContext();
+
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState('en');
+  
+  const translations = {
+    en: {
+      home: 'Home',
+      vote: 'Vote',
+      publishProject: 'Publish Project',
+      createToken: 'Create Token',
+      swap: 'Swap',
+      news: 'News',
+      forum: 'Forum',
+      switchToSpanish: 'ES'
+    },
+    es: {
+      home: 'Inicio',
+      vote: 'Votar',
+      publishProject: 'Publicar Proyecto',
+      createToken: 'Crear Token',
+      swap: 'Intercambiar',
+      news: 'Noticias',
+      forum: 'Foro',
+      switchToEnglish: 'EN'
+    }
+  };
+  
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'es' : 'en');
+  };
+  
+  return (
+    <LanguageContext.Provider value={{ language, translations, toggleLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
 
 export const Menu = ({
   className,
@@ -24,47 +72,67 @@ export const Menu = ({
   to4,
   to5,
 }) => {
+  const { language, translations, toggleLanguage } = useLanguage();
+  const t = translations[language];
+  
   return (
     <div className={`menu ${className}`}>
       <Link className="text-wrapper-21" to={to2}>
-        Home
+        {t.home}
       </Link>
 
       <img className="line-2" alt="Line" src={line} />
 
       <Link className="text-wrapper-22" to={to}>
-        Vote
+        {t.vote}
       </Link>
 
       <img className="line-2" alt="Line" src={img} />
 
       <Link className="text-wrapper-22" to={to1}>
-        Publish project
+        {t.publishProject}
       </Link>
 
       <img className="line-2" alt="Line" src={line1} />
 
       <Link className="text-wrapper-22" to={to3}>
-        Create token
+        {t.createToken}
       </Link>
 
       <img className="line-2" alt="Line" src={line2} />
 
       <Link className="text-wrapper-22" to={to4}>
-        Swap
+        {t.swap}
       </Link>
 
       <img className="line-2" alt="Line" src={line3} />
 
       <Link className="text-wrapper-22" to={to5}>
-        news
+        {t.news}
       </Link>
 
       <img className="line-2" alt="Line" src={line4} />
 
-      <div className="text-wrapper-23">Forum</div>
+      <div className="text-wrapper-23">{t.forum}</div>
 
       <img className="line-2" alt="Line" src={line5} />
+      
+      <button 
+        className="language-toggle" 
+        onClick={toggleLanguage}
+        style={{
+          background: 'transparent',
+          border: '1px solid #ff01a1',
+          color: '#ff01a1',
+          padding: '4px 8px',
+          borderRadius: '4px',
+          fontSize: '14px',
+          cursor: 'pointer',
+          fontFamily: 'Orbitron, Helvetica'
+        }}
+      >
+        {language === 'en' ? 'ES' : 'EN'}
+      </button>
     </div>
   );
 };

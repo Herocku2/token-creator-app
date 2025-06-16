@@ -6,9 +6,30 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../Menu/Menu";
 import "./style.css";
 
 export const TarjetaVotos = ({ className, line = "/img/line-8-1.svg", to }) => {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+  
+  const voteTranslations = {
+    en: {
+      vote: 'Vote',
+      ago: 'ago',
+      mcap: 'Mcap:',
+      vol24h: '24H vol:'
+    },
+    es: {
+      vote: 'Votar',
+      ago: 'hace',
+      mcap: 'Cap. mercado:',
+      vol24h: 'Vol. 24H:'
+    }
+  };
+  
+  const vt = voteTranslations[language];
+  
   return (
     <Link className={`tarjeta-votos ${className}`} to={to}>
       <div className="group-7">
@@ -37,13 +58,13 @@ export const TarjetaVotos = ({ className, line = "/img/line-8-1.svg", to }) => {
 
           <div className="text-wrapper-34">Complex</div>
 
-          <div className="text-wrapper-35">6M a go</div>
+          <div className="text-wrapper-35">6M {vt.ago}</div>
         </div>
 
         <div className="frame-52">
           <div className="frame-53">
             <div className="frame-54">
-              <div className="text-wrapper-36">Mcap:</div>
+              <div className="text-wrapper-36">{vt.mcap}</div>
 
               <div className="text-wrapper-37">+ 0,5%</div>
             </div>
@@ -53,7 +74,7 @@ export const TarjetaVotos = ({ className, line = "/img/line-8-1.svg", to }) => {
 
           <div className="frame-55">
             <div className="frame-54">
-              <div className="text-wrapper-39">24 H vol:</div>
+              <div className="text-wrapper-39">{vt.vol24h}</div>
 
               <div className="text-wrapper-37">+ 0,5%</div>
             </div>
@@ -65,11 +86,11 @@ export const TarjetaVotos = ({ className, line = "/img/line-8-1.svg", to }) => {
         <img className="line-3" alt="Line" src={line} />
 
         <div className="frame-56">
-          <div className="text-wrapper-40">6M a go</div>
+          <div className="text-wrapper-40">6M {vt.ago}</div>
         </div>
 
         <div className="frame-57">
-          <div className="text-wrapper-41">Vote</div>
+          <div className="text-wrapper-41">{vt.vote}</div>
         </div>
       </div>
     </Link>

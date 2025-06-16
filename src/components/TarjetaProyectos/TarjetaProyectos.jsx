@@ -6,6 +6,7 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../Menu/Menu";
 import "./style.css";
 
 export const TarjetaProyectos = ({
@@ -14,6 +15,22 @@ export const TarjetaProyectos = ({
   starOutline = "/img/star-outline.svg",
   to,
 }) => {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+  
+  const projectTranslations = {
+    en: {
+      progress: 'Progress',
+      justNow: 'just now'
+    },
+    es: {
+      progress: 'Progreso',
+      justNow: 'ahora mismo'
+    }
+  };
+  
+  const pt = projectTranslations[language];
+  
   return (
     <Link className="tarjeta-proyectos" to={to}>
       <div className="frame-22">
@@ -32,7 +49,7 @@ export const TarjetaProyectos = ({
             <div className="frame-27">
               <div className="text-wrapper-14">Complex</div>
 
-              <div className="text-wrapper-15">just now</div>
+              <div className="text-wrapper-15">{pt.justNow}</div>
             </div>
           </div>
         </div>
@@ -63,7 +80,7 @@ export const TarjetaProyectos = ({
       <div className="frame-34">
         <div className="frame-35">
           <div className="frame-36">
-            <div className="text-wrapper-16">Progres</div>
+            <div className="text-wrapper-16">{pt.progress}</div>
 
             <div className="text-wrapper-16">50%</div>
           </div>

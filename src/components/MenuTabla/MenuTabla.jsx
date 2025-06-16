@@ -6,6 +6,7 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../Menu/Menu";
 import "./style.css";
 
 export const MenuTabla = ({
@@ -21,22 +22,40 @@ export const MenuTabla = ({
   to1,
   to2,
 }) => {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+  
+  const menuTranslations = {
+    en: {
+      all: 'All',
+      next: 'Next',
+      new: 'New'
+    },
+    es: {
+      all: 'Todos',
+      next: 'Siguiente',
+      new: 'Nuevo'
+    }
+  };
+  
+  const mt = menuTranslations[language];
+  
   return (
     <div className={`menu-tabla ${className}`}>
       <Link className={`text-wrapper-11 ${divClassName}`} to={to2}>
-        All
+        {mt.all}
       </Link>
 
       <img className="line" alt="Line" src={line} />
 
       <Link className={`text-wrapper-12 ${divClassNameOverride}`} to={to}>
-        Next
+        {mt.next}
       </Link>
 
       <img className="line" alt="Line" src={img} />
 
       <Link className={`new ${divClassName1}`} to={to1}>
-        {text}
+        {mt.new}
       </Link>
 
       <img className="line" alt="Line" src={line1} />

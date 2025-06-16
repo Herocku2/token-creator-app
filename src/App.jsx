@@ -1,5 +1,6 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { LanguageProvider } from "./components/Menu/Menu";
 import { Create } from "./screens/Create";
 import { CreateScreen } from "./screens/CreateScreen";
 import { CreateWrapper } from "./screens/CreateWrapper";
@@ -89,5 +90,9 @@ const router = createBrowserRouter([
 ]);
 
 export const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
 };
