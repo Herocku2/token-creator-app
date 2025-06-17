@@ -2,11 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Heder } from "../../components/Heder";
 import { BanerMovil } from "../../components/BanerMovil";
+import { useLanguage } from "../../components/Menu/Menu";
 import "./style.css";
 
 export const PublishWrapper = () => {
+  const { language, translations } = useLanguage();
+  const t = translations[language];
+  
+  const publishTranslations = {
+    en: {
+      officialProfileLink: 'Official profile link.',
+      officialWebLink: 'Official website link.',
+      contactEmail: 'Contact Email:',
+      provideEmail: 'Provide a contact email for inquiries or issues.',
+      supportChannelLink: 'Support Channel Link (Telegram):',
+      supportChannelDesc: 'Link to an official channel where participants can receive support.',
+      smartContractAudit: 'Smart Contract Audit:',
+      auditInfo: 'Include information about whether the smart contract has been audited by an external firm.',
+      back: 'Back',
+      send: 'Send'
+    },
+    es: {
+      officialProfileLink: 'Enlace a perfil oficial.',
+      officialWebLink: 'Enlace a la web oficial.',
+      contactEmail: 'Correo de Contacto:',
+      provideEmail: 'Proveer un correo electrónico de contacto para consultas o problemas.',
+      supportChannelLink: 'Enlace al Canal de Soporte (Telegram):',
+      supportChannelDesc: 'Enlace a un canal oficial donde los participantes puedan recibir soporte.',
+      smartContractAudit: 'Auditoría de Smart Contract:',
+      auditInfo: 'Incluir la información sobre si el contrato inteligente ha sido auditado por una firma externa.',
+      back: 'Atrás',
+      send: 'Enviar'
+    }
+  };
+  
+  const pt = publishTranslations[language];
   return (
-    <div className="publish-wrapper">
+    <div className="publish-wrapper screen-wrapper">
       <Heder
         className="heder-instance"
         to="/vote"
@@ -52,7 +84,7 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <div className="text-wrapper-135">Enlace a perfile oficial.</div>
+              <div className="text-wrapper-135">{pt.officialProfileLink}</div>
             </div>
 
             <div className="frame-170">
@@ -60,7 +92,7 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <div className="text-wrapper-135">Enlace a perfile oficial.</div>
+              <div className="text-wrapper-135">{pt.officialProfileLink}</div>
             </div>
           </div>
 
@@ -70,7 +102,7 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <div className="text-wrapper-135">Enlace a perfile oficial.</div>
+              <div className="text-wrapper-135">{pt.officialProfileLink}</div>
             </div>
 
             <div className="frame-171">
@@ -78,7 +110,7 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <div className="text-wrapper-135">Enlace a perfile oficial.</div>
+              <div className="text-wrapper-135">{pt.officialProfileLink}</div>
             </div>
           </div>
 
@@ -88,7 +120,7 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <div className="text-wrapper-135">Enlace a perfile oficial.</div>
+              <div className="text-wrapper-135">{pt.officialProfileLink}</div>
             </div>
 
             <div className="frame-171">
@@ -96,32 +128,30 @@ export const PublishWrapper = () => {
 
               <div className="rectangle-21" />
 
-              <p className="text-wrapper-135">Enlace a la web oficial.</p>
+              <p className="text-wrapper-135">{pt.officialWebLink}</p>
             </div>
           </div>
 
           <div className="frame-169">
             <div className="frame-171">
-              <div className="text-wrapper-134">Correo de Contacto:</div>
+              <div className="text-wrapper-134">{pt.contactEmail}</div>
 
               <div className="rectangle-21" />
 
               <p className="text-wrapper-135">
-                Proveer un correo electrónico de contacto para consultas o
-                problemas.
+                {pt.provideEmail}
               </p>
             </div>
 
             <div className="frame-171">
               <p className="text-wrapper-134">
-                Enlace al Canal de Soporte (Telegram):
+                {pt.supportChannelLink}
               </p>
 
               <div className="rectangle-21" />
 
               <p className="text-wrapper-135">
-                Enlace a un canal oficial donde los participantes puedan recibir
-                soporte.
+                {pt.supportChannelDesc}
               </p>
             </div>
           </div>
@@ -129,14 +159,13 @@ export const PublishWrapper = () => {
           <div className="frame-169">
             <div className="frame-171">
               <div className="text-wrapper-134">
-                Auditoría de Smart Contract:
+                {pt.smartContractAudit}
               </div>
 
               <div className="rectangle-22" />
 
               <p className="text-wrapper-136">
-                Incluir la información sobre si el contrato inteligente ha sido
-                auditado por una firma externa..
+                {pt.auditInfo}
               </p>
             </div>
           </div>
@@ -144,11 +173,11 @@ export const PublishWrapper = () => {
 
         <div className="frame-172">
           <Link className="frame-173" to="/publish2">
-            <div className="text-wrapper-137">Back</div>
+            <div className="text-wrapper-137">{pt.back}</div>
           </Link>
 
           <Link className="frame-173" to="/publish4">
-            <div className="text-wrapper-137">Send</div>
+            <div className="text-wrapper-137">{pt.send}</div>
           </Link>
         </div>
       </div>

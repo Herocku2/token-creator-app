@@ -9,6 +9,8 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home-all .img-3 {
@@ -29,25 +31,29 @@
 .home-all .fair-launches-the {
   height: 185.51px;
   position: relative;
-  width: 1500.82px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-all .no-need-for-a {
   height: 131.75px;
   position: relative;
-  width: 1390.64px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-all .element-launches-a-month {
   height: 52.2px;
   position: relative;
-  width: 1315.84px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-all .baner {
   flex: 0 0 auto;
   position: relative;
-  width: 1524px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-all .titulo-pagina-2 {

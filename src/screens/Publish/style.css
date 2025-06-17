@@ -9,6 +9,8 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .publish .heder-6 {
@@ -23,7 +25,8 @@
   gap: 10px;
   padding: 24px 10px 10px;
   position: relative;
-  width: 1515px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .publish .baner-movil-9 {
@@ -39,10 +42,11 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
-  gap: 53px;
+  gap: 40px;
   padding: 24px 0px 0px;
   position: relative;
-  width: 1424px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .publish .frame-119 {
@@ -81,18 +85,18 @@
 .publish .text-wrapper-112 {
   color: #ffffff;
   font-family: "Orbitron", Helvetica;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 400;
-  height: 90px;
+  height: 70px;
   letter-spacing: 0;
   line-height: normal;
-  margin-bottom: -8.00px;
-  margin-left: -28.50px;
-  margin-right: -28.50px;
-  margin-top: -10.00px;
+  margin-bottom: -6.00px;
+  margin-left: -20.00px;
+  margin-right: -20.00px;
+  margin-top: -8.00px;
   position: relative;
   text-align: center;
-  width: 131px;
+  width: 100px;
 }
 
 .publish .line-6 {

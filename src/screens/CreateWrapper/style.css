@@ -1,14 +1,6 @@
 .create-wrapper {
-  align-items: center;
-  background-color: #020102;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 100vh;
-  padding: 10px 24px;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+  /* Estilos específicos para CreateWrapper */
+  gap: 25px; /* Ejemplo de ajuste de gap */
 }
 
 .create-wrapper .heder-12 {
@@ -24,7 +16,7 @@
   padding: 24px 10px 10px;
   position: relative;
   width: 100%;
-  max-width: 1515px;
+  max-width: 1000px;
 }
 
 .create-wrapper .baner-movil-16 {
@@ -40,10 +32,10 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
-  gap: 74px;
+  gap: 60px;
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%; /* Asegurar que ocupe el ancho disponible */
+  max-width: 1200px; /* Aumentar un poco el max-width si es necesario para el contenido */
   box-sizing: border-box;
 }
 
@@ -152,18 +144,18 @@
 .create-wrapper .text-wrapper-150 {
   color: #df9dc7;
   font-family: "Orbitron", Helvetica;
-  font-size: 64px;
+  font-size: 50px; /* Reducido para mejor ajuste */
   font-weight: 400;
-  height: 90px;
   letter-spacing: 0;
-  line-height: normal;
-  margin-bottom: -8.00px;
-  margin-left: -28.50px;
-  margin-right: -28.50px;
-  margin-top: -10.00px;
+  line-height: 1; /* Ajustado para centrar verticalmente */
+  display: flex; /* Para centrar con align-items y justify-content */
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Para que ocupe toda la altura del contenedor */
+  width: 100%; /* Para que ocupe todo el ancho del contenedor */
+  margin: 0; /* Resetear márgenes */
   position: relative;
   text-align: center;
-  width: 131px;
 }
 
 .create-wrapper .text-wrapper-151 {
@@ -188,9 +180,11 @@
   align-self: stretch;
   display: flex;
   flex: 0 0 auto;
-  gap: 70px;
+  gap: 20px; /* Reducir el gap para que quepan mejor */
   position: relative;
-  width: 100%;
+  width: 100%; /* Asegurar que ocupe el ancho disponible */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  justify-content: center; /* Centrar los planes cuando se envuelven */
 }
 
 .create-wrapper .frame-202 {
@@ -203,7 +197,11 @@
   gap: 12px;
   padding: 0px 16px 16px;
   position: relative;
-  width: 464px;
+  width: 100%; /* Hacer que ocupe el ancho del contenedor padre */
+  max-width: 464px; /* Mantener el ancho máximo original para cada plan */
+  flex-grow: 1; /* Permitir que crezca si hay espacio */
+  flex-shrink: 1; /* Permitir que se encoja si no hay espacio */
+  min-width: 300px; /* Establecer un ancho mínimo para evitar que se colapse demasiado */
 }
 
 .create-wrapper .frame-203 {
@@ -420,7 +418,7 @@
 .create-wrapper .frame-208 {
   align-items: center;
   align-self: stretch;
-  background-image: url(../../../static/img/frame-27-2.png);
+  background-image: url(/img/frame-27-2.png); /* Corregida la ruta de la imagen */
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 8px;
@@ -514,9 +512,11 @@
   align-items: flex-start;
   display: flex;
   flex: 0 0 auto;
-  gap: 70px;
+  gap: 20px; /* Reducir el gap */
   position: relative;
-  width: 1532px;
+  width: 100%; /* Asegurar que ocupe el ancho disponible */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  justify-content: center; /* Centrar los planes cuando se envuelven */
 }
 
 .create-wrapper .frame-211 {

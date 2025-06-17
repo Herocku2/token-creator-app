@@ -1,12 +1,6 @@
 .publish-screen {
-  align-items: center;
-  background-color: #020102;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 1969px;
-  padding: 10px 24px;
-  position: relative;
+  /* Estilos específicos para PublishScreen */
+  gap: 20px; /* Ejemplo de ajuste de gap */
 }
 
 .publish-screen .heder-8 {
@@ -21,7 +15,8 @@
   gap: 10px;
   padding: 24px 10px 10px;
   position: relative;
-  width: 1515px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .publish-screen .baner-movil-11 {
@@ -37,10 +32,11 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
-  gap: 48px;
+  gap: 40px;
   padding: 24px 0px 0px;
   position: relative;
-  width: 1418px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .publish-screen .frame-139 {
@@ -78,18 +74,18 @@
 .publish-screen .text-wrapper-118 {
   color: #ebb9d8;
   font-family: "Orbitron", Helvetica;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 400;
-  height: 90px;
+  height: 70px;
   letter-spacing: 0;
   line-height: normal;
-  margin-bottom: -8.00px;
-  margin-left: -28.50px;
-  margin-right: -28.50px;
-  margin-top: -10.00px;
+  margin-bottom: -6.00px;
+  margin-left: -20.00px;
+  margin-right: -20.00px;
+  margin-top: -8.00px;
   position: relative;
   text-align: center;
-  width: 131px;
+  width: 100px;
 }
 
 .publish-screen .line-7 {
@@ -246,7 +242,8 @@
   gap: 26px;
   justify-content: flex-end;
   position: relative;
-  width: 1394px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .publish-screen .frame-148 {

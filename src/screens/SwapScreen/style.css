@@ -1,14 +1,6 @@
 .swap-screen {
-  align-items: center;
-  background-color: #020102;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 100vh;
-  padding: 10px 24px;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+  /* Estilos específicos para SwapScreen */
+  gap: 15px; /* Ejemplo de ajuste de gap */
 }
 
 .swap-screen .heder-3 {
@@ -23,7 +15,8 @@
   gap: 10px;
   padding: 24px 10px 10px;
   position: relative;
-  width: 1515px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .swap-screen .baner-movil-3 {
@@ -38,10 +31,11 @@
   align-items: flex-start;
   display: flex;
   gap: 40px;
-  height: 633px;
+  min-height: 633px;
   justify-content: center;
   position: relative;
-  width: 1575px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .swap-screen .rectangle-8 {

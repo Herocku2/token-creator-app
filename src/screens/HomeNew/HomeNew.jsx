@@ -7,7 +7,7 @@ import "./style.css";
 
 export const HomeNew = () => {
   return (
-    <div className="home-new">
+    <div className="home-new screen-wrapper">
       <Heder
         className="heder-instance"
         to="/vote"

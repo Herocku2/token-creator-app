@@ -5,6 +5,7 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import PropTypes from "prop-types";
 import React from "react";
+import { useLanguage } from "../Menu/Menu";
 import "./style.css";
 
 export const Paginacion = ({
@@ -12,6 +13,18 @@ export const Paginacion = ({
   iconChevronRight = "/img/icon-chevron-right.png",
   img = "/img/icon-chevron-right-1.png",
 }) => {
+  const { language } = useLanguage();
+  
+  const paginationTranslations = {
+    en: {
+      pageInfo: '1 of 10'
+    },
+    es: {
+      pageInfo: '1 de 10'
+    }
+  };
+  
+  const pt = paginationTranslations[language];
   return (
     <div className={`paginacion ${className}`}>
       <img
@@ -20,7 +33,7 @@ export const Paginacion = ({
         src={iconChevronRight}
       />
 
-      <div className="element-de">1&nbsp;&nbsp;de&nbsp;&nbsp;10</div>
+      <div className="element-de">{pt.pageInfo}</div>
 
       <img className="icon-chevron-right" alt="Icon chevron right" src={img} />
     </div>

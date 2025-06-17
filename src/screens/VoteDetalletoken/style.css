@@ -1,12 +1,6 @@
 .vote-detalletoken {
-  align-items: center;
-  background-color: #020102;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 2444px;
-  padding: 10px 24px;
-  position: relative;
+  /* Estilos específicos para VoteDetalletoken */
+  gap: 15px; /* Ejemplo de ajuste de gap */
 }
 
 .vote-detalletoken .heder-5 {
@@ -21,7 +15,8 @@
   gap: 10px;
   padding: 24px 10px 10px;
   position: relative;
-  width: 1515px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .vote-detalletoken .baner-movil-7 {
@@ -65,7 +60,8 @@
   justify-content: center;
   padding: 24px 0px 0px;
   position: relative;
-  width: 1675px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .vote-detalletoken .frame-112 {
@@ -305,7 +301,8 @@
   flex-direction: column;
   gap: 22px;
   position: relative;
-  width: 645px;
+  width: 100%;
+  max-width: 645px;
 }
 
 .vote-detalletoken .text-wrapper-110 {

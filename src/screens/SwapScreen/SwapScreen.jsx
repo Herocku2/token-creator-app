@@ -6,7 +6,7 @@ import "./style.css";
 
 export const SwapScreen = () => {
   return (
-    <div className="swap-screen">
+    <div className="swap-screen screen-wrapper">
       <Heder
         className="heder-3"
         logoColor="url(#pattern0_2089_1279)"

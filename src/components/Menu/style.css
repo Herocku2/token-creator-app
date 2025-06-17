@@ -1,8 +1,9 @@
 .menu {
   align-items: center;
-  display: inline-flex;
-  gap: 12px;
+  display: flex; /* Cambiado a flex */
+  gap: clamp(8px, 2vw, 12px); /* Gap responsivo */
   position: relative;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .menu .text-wrapper-21 {

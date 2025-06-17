@@ -1,0 +1,61 @@
+/* Global styles to prevent overflow issues */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh; /* Asegurar que ocupe toda la altura */
+  margin: 0;
+  padding: 0;
+  background-color: #020102; /* Fondo oscuro por defecto */
+}
+
+/* Contenedor principal para las pantallas */
+.screen-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para el contenido principal */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 10px 24px; /* Espaciado interno */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido de las pantallas */
+  min-height: calc(100vh - 20px); /* Ajustar altura considerando padding */
+}
+
+/* Clases más específicas para evitar conflictos */
+.app-container, .app-wrapper, .app-screen {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Responsive container */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Fix for tables and wide content */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .responsive-container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-container {
+    padding: 0 5px;
+  }
+}

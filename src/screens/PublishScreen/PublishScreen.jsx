@@ -2,11 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Heder } from "../../components/Heder";
 import { BanerMovil } from "../../components/BanerMovil";
+import { useLanguage } from "../../components/Menu/Menu";
 import "./style.css";
 
 export const PublishScreen = () => {
+  const { language } = useLanguage();
+  
+  const publishScreenTranslations = {
+    en: {
+      offerStartDate: 'Offer Start Date:',
+      exactDateTime: 'The exact day and time when the token sale will begin.'
+    },
+    es: {
+      offerStartDate: 'Fecha de Inicio de la Oferta:',
+      exactDateTime: 'El día y hora exactos en que comenzará la venta del token.'
+    }
+  };
+  
+  const pst = publishScreenTranslations[language];
   return (
-    <div className="publish-screen">
+    <div className="publish-screen screen-wrapper">
       <Heder
         className="heder-instance"
         to="/vote"
@@ -120,12 +135,12 @@ export const PublishScreen = () => {
 
           <div className="frame-144">
             <div className="frame-146">
-              <p className="text-wrapper-121">Fecha de Inicio de la Oferta:</p>
+              <p className="text-wrapper-121">{pst.offerStartDate}</p>
 
               <div className="rectangle-18" />
 
               <p className="text-wrapper-122">
-                El día y hora exactos en que comenzará la venta del token.
+                {pst.exactDateTime}
               </p>
             </div>
 

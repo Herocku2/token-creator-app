@@ -1,9 +1,10 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { LanguageProvider } from "./components/Menu/Menu";
+import "./global.css";
 import { Create } from "./screens/Create";
 import { CreateScreen } from "./screens/CreateScreen";
-import { CreateWrapper } from "./screens/CreateWrapper";
+import { CreateWrapper } from "./screens/CreateWrapper/CreateWrapper";
 import { DivWrapper } from "./screens/DivWrapper";
 import { HomeAll } from "./screens/HomeAll";
 import { HomeDetalletoken } from "./screens/HomeDetalletoken";

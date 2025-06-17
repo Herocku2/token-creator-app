@@ -9,6 +9,8 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home-detalletoken .heder-instance {
@@ -23,7 +25,8 @@
   gap: 10px;
   padding: 24px 10px 10px;
   position: relative;
-  width: 1515px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-detalletoken .baner-movil-6 {
@@ -72,7 +75,8 @@
   margin-left: -4.00px;
   object-fit: cover;
   position: relative;
-  width: 1016px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .home-detalletoken .swap-9 {

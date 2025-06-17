@@ -6,7 +6,7 @@ import "./style.css";
 
 export const VoteDetalletoken = () => {
   return (
-    <div className="vote-detalletoken">
+    <div className="vote-detalletoken screen-wrapper">
       <img className="heder-5" alt="Heder" src="/img/heder-6.svg" />
 
       <div className="titulo-pagina-8" />

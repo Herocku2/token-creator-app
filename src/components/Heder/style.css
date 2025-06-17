@@ -1,10 +1,12 @@
 .heder {
   align-items: center;
-  display: inline-flex;
-  gap: 15px;
-  position: relative;
+  display: flex; /* Cambiado a flex para mejor control */
+  justify-content: space-between; /* Distribuir espacio */
+  width: 100%; /* Ocupar todo el ancho disponible */
   padding: 8px 16px;
   max-height: 60px;
+  box-sizing: border-box; /* Incluir padding en el ancho total */
+  position: relative; /* Mantener por si hay elementos posicionados absolutamente dentro */
 }
 
 .heder .frame {
@@ -26,8 +28,8 @@
 
 .heder .div {
   align-items: center;
-  display: inline-flex;
+  display: flex; /* Cambiado a flex */
   flex: 0 0 auto;
-  gap: 60px;
+  gap: clamp(10px, 3vw, 60px); /* Gap responsivo */
   position: relative;
 }
