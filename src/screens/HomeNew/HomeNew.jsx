@@ -3,6 +3,7 @@ import { Heder } from "../../components/Heder";
 import { MenuTabla } from "../../components/MenuTabla";
 import { Paginacion } from "../../components/Paginacion";
 import { TarjetaProyectos } from "../../components/TarjetaProyectos";
+import { TarjetaRanking } from "../../components/TarjetaRanking";
 import "./style.css";
 
 export const HomeNew = () => {
@@ -49,22 +50,32 @@ export const HomeNew = () => {
       <div className="titulo-pagina-5" />
 
       <div className="frame-71">
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-7"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="4"
+          projectName="Nova Token"
+          projectStatus="Próximamente"
+          projectTime="en 3 días"
+          marketCapValue="$5K"
+          buttonText="+ 0.0005 SOL"
         />
-
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-8"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="5"
+          projectName="Crypto Z"
+          projectStatus="Nuevo"
+          projectTime="recién listado"
+          marketCapValue="$8.2K"
+          buttonText="+ 0.0008 SOL"
         />
-
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-9"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="6"
+          projectName="Galaxy Coin"
+          projectStatus="En Preventa"
+          projectTime="ahora"
+          marketCapValue="$15K"
+          buttonText="+ 0.0015 SOL"
         />
       </div>
 

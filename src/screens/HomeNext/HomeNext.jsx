@@ -53,14 +53,32 @@ export const HomeNext = () => {
         <TarjetaRanking
           className="tarjeta-ranking-instance"
           groupClassName="design-component-instance-node-2"
+          text="7"
+          projectName="Stellar Gem"
+          projectStatus="Activo"
+          projectTime="hace 1 semana"
+          marketCapValue="$30K"
+          buttonText="+ 0.003 SOL"
         />
         <TarjetaRanking
           className="tarjeta-ranking-5"
           groupClassName="design-component-instance-node-2"
+          text="8"
+          projectName="Moon Shot"
+          projectStatus="Trending"
+          projectTime="hace 5 min"
+          marketCapValue="$100K"
+          buttonText="+ 0.01 SOL"
         />
         <TarjetaRanking
           className="tarjeta-ranking-6"
           groupClassName="design-component-instance-node-2"
+          text="9"
+          projectName="Planet X"
+          projectStatus="Estable"
+          projectTime="hace 1 mes"
+          marketCapValue="$75K"
+          buttonText="+ 0.007 SOL"
         />
       </div>
 

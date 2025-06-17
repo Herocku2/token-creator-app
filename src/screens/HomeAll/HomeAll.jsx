@@ -3,6 +3,7 @@ import { Heder } from "../../components/Heder";
 import { MenuTabla } from "../../components/MenuTabla";
 import { Paginacion } from "../../components/Paginacion";
 import { TarjetaProyectos } from "../../components/TarjetaProyectos";
+import { TarjetaRanking } from "../../components/TarjetaRanking";
 import "./style.css";
 
 export const HomeAll = () => {
@@ -49,22 +50,32 @@ export const HomeAll = () => {
       <div className="titulo-pagina-2" />
 
       <div className="frame-61">
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-2"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="1"
+          projectName="Proyecto Alpha"
+          projectStatus="En Desarrollo"
+          projectTime="hace 2h"
+          marketCapValue="$25.5K"
+          buttonText="+ 0.002 SOL"
         />
-
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-3"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="2"
+          projectName="AI Bonk Complex"
+          projectStatus="Complex"
+          projectTime="just now"
+          marketCapValue="$12.1K"
+          buttonText="+ 0.001 SOL"
         />
-
-        <img
+        <TarjetaRanking
           className="tarjeta-ranking-4"
-          alt="Tarjeta ranking"
-          src="/img/tarjeta-ranking.png"
+          text="3"
+          projectName="Future Coin"
+          projectStatus="Lanzado"
+          projectTime="ayer"
+          marketCapValue="$50K"
+          buttonText="+ 0.005 SOL"
         />
       </div>
 
